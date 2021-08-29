@@ -1,4 +1,4 @@
-<form><div class="container">
+<form [formGroup]="formulario"><div class="container">
     <div class="row ">
         <div class="col">
             <img src="./assets//images/Logo-litiobyte-blanco.png" class="img-fluid mx-auto d-block imagen" alt="Responsive image">
@@ -15,24 +15,24 @@
                 <div id="groupButtons">
                 <div class="row">
                     <div class="col-4">
-                        <button formControlName="btn5" >5%</button>
+                        <button  (click)="leerPorc(5)" >5%</button>
                     </div>
                     <div class="col-4">
-                      <button formControlName="btn10"  >10%</button>
+                      <button  (click)="leerPorc(10)">10%</button>
                     </div>
                     <div class="col-4">
-                        <button formControlName="btn15"  >15%</button>
+                        <button  (click)="leerPorc(15)" >15%</button>
                     </div>
                 </div>
                 <div class="row mt-2 mb-1">
                     <div class="col-4">
-                        <button formControlName="btn25"  >25%</button>
+                        <button   (click)="leerPorc(25)">25%</button>
                     </div>
                     <div class="col-4">
-                        <button formControlName="btn50"  >50%</button>
+                        <button  (click)="leerPorc(50)">50%</button>
                     </div>
                     <div class="col-4">
-                        <input formControlName="txtI"  class="form-control" placeholder="Ingrese %" type="number" >
+                        <input formControlName="txtI"  class="form-control" placeholder="%" type="number" >
                     </div>
                 </div>
                 </div>
