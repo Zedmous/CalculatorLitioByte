@@ -1,1 +1,120 @@
-/* You can add global styles to this file, and also import other style files */
+.container {
+  background-color: #1c3b4e;
+  margin: none;
+  color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  padding-right: 15px;  
+  padding-left: 15px; 
+  margin-right: auto; 
+  margin-left: auto;
+} 
+  
+@media (max-width: 575px) {
+  .contenedor{
+    background:#FFFFFF;
+    padding: none;
+  }
+  
+  .contIzquierda{
+    background:#FFFFFF;
+    color: #1c3b4e;
+    font-size: 16px;
+    padding: 30px;
+  }
+  .contDerecha{
+    background:#1c3b4e;
+    padding: 30px;
+  }
+}
+@media (min-width: 576px) {  
+  .container{
+    max-width: 1440px; 
+  }
+  .contenedor{
+    background:#FFFFFF;
+    padding: 30px;
+  }
+  .contIzquierda{
+    background:#FFFFFF;
+    color: #1c3b4e;
+    
+    padding: 30px 15px 30px 30px;
+  }
+  .contDerecha{
+    background:#1c3b4e;
+    padding: 30px 30px 30px 15px;
+  }
+  
+}
+* {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight:semibold;
+}
+
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  background-color: #3F6E8A;
+  border: 0px;
+  color: white;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #1c3b4e;
+}
+
+
+button:focus{ 
+  outline: none;
+}
+
+.btnIzquierda {
+  background-color: #FFFFFF;
+  border: 0px;
+  color: #1c3b4e;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 5px 5px;
+  width: 100%;
+}
+
+.btnIzquierda:hover {
+  background-color: #EDEDED;
+}
+
+
+
+
+/** FUENTES **/
+.txttotalAmount{
+  font-size: 22px;
+  font-weight:semibold;
+  
+}
+.mnttotalAmount{
+  font-size: 45px;
+  font-weight:bold;
+}
+
+.txtsubtotalAmount{
+  font-size: 16px;
+  font-weight:semibold;
+  
+}
+.mntsubtotalAmount{
+  font-size: 25px;
+  font-weight:bold;
+}

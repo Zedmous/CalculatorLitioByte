@@ -3,14 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MainContentComponent } from './pages/main-content/main-content.component';
+import { RightComponent } from './pages/right/right.component';
+import { LeftComponent } from './pages/left/left.component';
+import { InputsComponent } from './pages/inputs/inputs.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainContentComponent,
+    RightComponent,
+    LeftComponent,
+    InputsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
