@@ -1,72 +1,18 @@
-<form [formGroup]="formulario"><div class="container">
-    <div class="row ">
-        <div class="col">
-            <img src="./assets//images/Logo-litiobyte-blanco.png" class="img-fluid mx-auto d-block imagen" alt="Responsive image">
+<form [formGroup]="formulario">
+    <div class="container">
+        <div class="row ">
+            <div class="col">
+                <img src="./assets//images/Logo-litiobyte-blanco.png" class="img-fluid mx-auto d-block imagen" alt="Responsive image">
+            </div>
+        </div>
+        <div class="row contenedor">
+            <div class="col-sm-6 contIzquierda">
+                <app-left></app-left>
+            </div>
+            <div class="col-sm-6 contDerecha">
+                <app-right></app-right>
+            </div>
+            
         </div>
     </div>
-    <div class="row contenedor">
-        
-            <div class="col-sm-6 contIzquierda">
-                
-                <label for="txttotalAccount" class="form-label">Total de la cuenta</label>
-                <input formControlName="txttotalAccount"  class="form-control" type="number" id="txttotalAccount" >
-                
-                <label for="groupButtons" class="form-label">Seleccione la cantidad de propina %</label>
-                <div id="groupButtons">
-                <div class="row">
-                    <div class="col-4">
-                        <button  (click)="leerPorc(5)" >5%</button>
-                    </div>
-                    <div class="col-4">
-                      <button  (click)="leerPorc(10)">10%</button>
-                    </div>
-                    <div class="col-4">
-                        <button  (click)="leerPorc(15)" >15%</button>
-                    </div>
-                </div>
-                <div class="row mt-2 mb-1">
-                    <div class="col-4">
-                        <button   (click)="leerPorc(25)">25%</button>
-                    </div>
-                    <div class="col-4">
-                        <button  (click)="leerPorc(50)">50%</button>
-                    </div>
-                    <div class="col-4">
-                        <input formControlName="txtI"  class="form-control" placeholder="%" type="number" >
-                    </div>
-                </div>
-                </div>
-                <label for="txtnumPersons" class="form-label">Número de personas</label>
-                <input formControlName="txtnumPersons"  class="form-control" type="number" id="txtnumPersons" >
-            </div>
-            <div class="col-sm-6  contDerecha">
-                <div class="row ">
-                    <div class="col-6 text-left txtsubtotalAmount">
-                        <label class="form-label">Propina por persona</label>
-                    </div>
-                    <div class="col-6 mntsubtotalAmount">
-                        $0.0
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6 txtsubtotalAmount">
-                        <label class="form-label">Propina Total</label>
-                    </div>
-                    <div class="col-6 mntsubtotalAmount">
-                        $0.0
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6 txttotalAmount">
-                        Cuenta + Propina
-                    </div>
-                    <div class="col-6 mnttotalAmount">
-                        $0.0
-                    </div>
-                </div>
-                <button class="btnIzquierda">Limpiar</button>
-            </div>
-        
-     </div>
- </div>
 </form>

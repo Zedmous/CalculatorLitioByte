@@ -14,6 +14,7 @@
   .contenedor{
     background:#FFFFFF;
     padding: none;
+    min-width: 375px
   }
   
   .contIzquierda{
@@ -80,28 +81,10 @@ button:focus{
   outline: none;
 }
 
-.btnIzquierda {
-  background-color: #FFFFFF;
-  border: 0px;
-  color: #1c3b4e;
-  cursor: pointer;
-  margin-right: 5px;
-  margin-left: 5px;
-  padding: 5px 5px;
-  width: 100%;
-}
-
-.btnIzquierda:hover {
-  background-color: #EDEDED;
-}
-
-
-
-
 /** FUENTES **/
 .txttotalAmount{
   font-size: 22px;
-  font-weight:semibold;
+  font-weight: 600;
   
 }
 .mnttotalAmount{
@@ -111,7 +94,7 @@ button:focus{
 
 .txtsubtotalAmount{
   font-size: 16px;
-  font-weight:semibold;
+  font-weight: 600;
   
 }
 .mntsubtotalAmount{
