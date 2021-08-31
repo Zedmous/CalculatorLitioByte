@@ -6,10 +6,74 @@
     </div>
     <div class="row contenedor">
         <div class="col-sm-6 contIzquierda">
-            <app-left></app-left>
+            <form [formGroup]="formulario" (ngSubmit)="calcular()">
+                <label for="txttotalAccount" class="form-label">Total de la cuenta</label>
+                <input (keyup.enter)="calcular()" formControlName="txttotalAccount"  class="form-control text-end input-icono in-ic-account" type="number" id="txttotalAccount" >
+                
+                <label for="groupButtons" class="form-label">Seleccione la cantidad de propina %</label>
+                <div id="groupButtons">
+                    <div class="row">
+                        <div class="col-4">
+                            <button type="button" (click)="leerPorc(5)">5%</button>
+                        </div>
+                        <div  class="col-4">
+                            <button type="button" (click)="leerPorc(10)" >10%</button>
+                        </div>
+                        <div  class="col-4">
+                            <button type="button" (click)="leerPorc(15)">15%</button>
+                        </div>
+                    </div>
+                    <div class="row mt-2 mb-1">
+                        <div class="col-4">
+                            <button type="button" (click)="leerPorc(25)">25%</button>
+                        </div>
+                        <div class="col-4">
+                            <button type="button" (click)="leerPorc(50)">50%</button>
+                        </div>
+                        <div class="col-4">
+                            <input (keyup.enter)="calcular()" formControlName="txtingresep"  class="form-control" placeholder="Ingrese %" type="number" >
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col form-label text-start">Número de personas</div>
+                    <div *ngIf="this.formulario.get('txtnumPersons')?.hasError('required')" class="col text-danger text-end">No puede ser 0</div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input (keyup.enter)="calcular()" formControlName="txtnumPersons"  class="form-control text-end input-icono in-ic-persons" type="number" id="txtnumPersons" >
+                    </div>
+                </div>
+            </form>
         </div>
         <div class="col-sm-6 contDerecha">
-            <app-right></app-right>
+            <div class="row ">
+
+                <div class="col-6 text-start txtsubtotalAmount">
+                    <label class="form-label">Propina por persona</label>
+                </div>
+                <div class="col-6 text-end mntsubtotalAmount">
+                    $  {{ propinaPersona }}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 text-start txtsubtotalAmount">
+                    <label class="form-label">Propina Total</label>
+                </div>
+                <div class="col-6 text-end mntsubtotalAmount">
+                    $  {{ propinaTotal }}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 text-start txttotalAmount">
+                    <label class="form-label">Cuenta + Propina</label>
+                </div>
+                <div class="col-6 text-end mnttotalAmount">
+                    $  {{ totalPT }}
+                </div>
+              </div>
+              <button (click)="limpiar()" type="button" class="buttonD btnIzquierda">Limpiar</button>
         </div>
         
     </div>

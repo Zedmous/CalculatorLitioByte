@@ -83,6 +83,26 @@ button:focus{
   outline: none;
 }
 
+.buttonD {
+  background-color: #FFFFFF;
+  border: 0px;
+  color: #1c3b4e;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.buttonD:hover {
+  background-color: #EDEDED;
+}
+
+
+.buttonD:focus{ 
+  outline: none;
+}
+
 /** FUENTES **/
 .txttotalAmount{
   font-size: 22px;
