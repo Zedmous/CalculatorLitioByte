@@ -4,7 +4,7 @@
       <label class="form-label">Propina por persona</label>
   </div>
   <div class="col-6 text-end mntsubtotalAmount">
-      $  0.0
+      $  {{ propinaPersona }}
   </div>
 </div>
 <div class="row">
@@ -12,7 +12,7 @@
       <label class="form-label">Propina Total</label>
   </div>
   <div class="col-6 text-end mntsubtotalAmount">
-      $  0.0
+      $  {{ propinaTotal }}
   </div>
 </div>
 <div class="row">
@@ -20,8 +20,8 @@
       <label class="form-label">Cuenta + Propina</label>
   </div>
   <div class="col-6 text-end mnttotalAmount">
-      $  0.0
+      $  {{ totalPT }}
   </div>
 </div>
-<button class="btnIzquierda">Limpiar</button>
+<button (click)="limpiar()" type="button" class="btnIzquierda">Limpiar</button>
 

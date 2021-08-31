@@ -14,8 +14,9 @@
   .contenedor{
     background:#FFFFFF;
     padding: none;
-    min-width: 375px
+    min-width: 375px;
   }
+  
   
   .contIzquierda{
     background:#FFFFFF;
@@ -58,6 +59,7 @@
 
 img {
   max-width: 100%;
+  min-width: 375px;
   height: auto;
 }
 
@@ -94,10 +96,47 @@ button:focus{
 
 .txtsubtotalAmount{
   font-size: 16px;
-  font-weight: 600;
+  
+  /*font-weight: 600;*/
+  font-weight:bold;
   
 }
 .mntsubtotalAmount{
   font-size: 25px;
   font-weight:bold;
+}
+
+/**/
+.input-icono {
+  
+  background-repeat: no-repeat;
+  background-position: 4px center;
+  background-size: 20px;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  padding-left: 28px;
+  height: 30px;
+  border: 1px solid rgba(9, 114, 163, 0.637);
+  border-radius: 3px;
+  font-size: 20px;
+  font-weight:600;
+}
+.input-icono input {
+  width: 100%;
+  font-size: 0.9em;
+  border: none;
+}
+.input-icono input:focus {
+  outline: none;
+}
+
+.in-ic-account {
+  background-image: url('assets/images/dolar.png');
+}
+.in-ic-persons {
+  background-image: url('assets/images/grupo.png');
+}
+.input-colors{
+  background-color:#EDEDED;
 }
